@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kashvi Publishing Sector</title>
+  <meta name="description" content="Deploy-ready single-file website. Replace text and images to customize." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#0ea5a4;--muted:#94a3b8;--glass: rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;color:#e6eef8;background:linear-gradient(180deg,#071225 0%, #071a2a 100%);}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header / Nav */
+    header{backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(10,16,24,0.6), rgba(10,16,24,0.4));position:sticky;top:0;z-index:60;border-bottom:1px solid rgba(255,255,255,0.03)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 8px}
+    .brand{display:flex;gap:12px;align-items:center}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+  background: radial-gradient(circle at center, #d6f7d0 0%, #a0e98e 100%);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 128, 0.25);
+  padding: 6px;
+}
+
+.logo-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
+}
+
+    nav a{color:#cfe7f7;text-decoration:none;margin:0 10px;padding:8px;border-radius:8px;font-weight:600}
+    nav a:hover, nav a.active{background:var(--glass);color:#fff}
+    .cta{background:var(--accent);color:#022;padding:8px 12px;border-radius:10px;font-weight:700;text-decoration:none}
+    .menu-toggle{display:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;padding:56px 0}
+    .hero h1{font-size:clamp(26px,4vw,40px);margin:0 0 12px;color:#fff}
+    .hero p{color:var(--muted);margin:0 0 20px}
+    .actions{display:flex;gap:12px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+
+    /* Services grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .service{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));border:1px solid rgba(255,255,255,0.02)}
+    .service h3{margin:0 0 8px}
+    .service p{margin:0;color:var(--muted)}
+
+    /* Sections */
+    section{padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.02)}
+    h2{margin:0 0 8px;color:#fff}
+    .muted{color:var(--muted)}
+
+    /* Contact form */
+    form{display:grid;gap:12px}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#eaf6ff}
+    textarea{min-height:120px;resize:vertical}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#022;font-weight:700;border:none;cursor:pointer}
+
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted);font-size:14px}
+
+    /* Careers list */
+    .jobs{display:grid;gap:12px}
+    .job{display:flex;justify-content:space-between;align-items:center;padding:14px;border-radius:10px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02)}
+    .job h4{margin:0}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      nav{display:none}
+      .menu-toggle{display:block;background:none;border:none;color:#fff}
+      .mobile-nav{display:none;padding:12px}
+      .mobile-nav.open{display:block}
+    }
+
+    /* small helpers */
+    .row{display:flex;gap:12px;align-items:center}
+    .pill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-weight:700}
+    p.colorlink{color:var(--accent);text-decoration:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">
+    <a href="index.html">
+      <img src="images\lg.jpeg" alt="KPS Logo" class="logo-img">
+    </a>
+  </div>
+        <div>
+          <div style="font-weight:800;color:#fff">Kashvi Publishing Sector</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Trusted. Modern. Fast.</div>
+        </div>
+      </div>
+
+      <nav id="mainNav">
+        <a href="#home" class="active" data-link>Home</a>
+        <a href="#about" data-link>About</a>
+        <a href="#services" data-link>Services</a>
+        <a href="#careers" data-link>Careers</a>
+        <a href="#contact" data-link>Contact</a>
+     
+      </nav>
+
+      <button class="menu-toggle" aria-label="menu" id="menuToggle">☰</button>
+    </div>
+    <div class="container mobile-nav" id="mobileNav"></div>
+  </header>
+
+  <main class="container">
+    <!-- HERO / Home -->
+    <section id="home" class="hero">
+      <div>
+        <p class="pill">Welcome to KPS Group — Kashvi Publishing Sector</p>
+        <h1>“We don’t just publish software — we publish possibilities.”</h1>
+        <p class="muted">KPS is a proud division of the KPS Group, dedicated to delivering high-quality software publishing, E-publishing, and Civil 3D design solutions.
+For over 12 years, we have been transforming ideas into reality through our unique blend of creativity, technology, and industry experience.
+
+Our team of skilled professionals works across software services, project publishing, and digital content development, serving clients across India and overseas.
+
+Founded by Mr. Kalliyamoorthy, KPS was built on a vision — to create opportunities for talented graduates from his native region and help them grow into global professionals.</p>
+        <div class="row actions">
+          <a class="btn" href="#contact" data-link>Contact Us</a>
+          <a class="colorlink" href="#services" data-link>See services →</a>
+        </div>
+
+        <div style="margin-top:18px" class="card">
+          <strong>Our Founder</strong>
+         <p>Mr. Kalliyamoorthy, Founder & Director of KPS, brings deep expertise in management and international project experience from Singapore.
+His vision was to return to his hometown and establish a company that gives real-time IT and publishing exposure to local youth.
+Under his leadership, KPS continues to expand its services and create meaningful opportunities for professionals in and around Villupuram.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3 style="margin-top:0">Why KPS</h3>
+          <p class="muted">Join us as we continue shaping the digital future, one project at a time.</p>
+          <ul style="margin:10px 0 0;padding-left:18px;color:var(--muted)">
+            <li>Software Publishing & Development</li>
+
+<li>E-Publishing & Digital Conversion Services</li>
+
+<li>Civil 3D Plan and Design Projects</li>
+
+<li>US-based Online Project Collaborations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p class="muted">KPS (Kashvi Publishing Sector) is a fast-growing IT and publishing service firm under the KPS Group, operating successfully for more than a decade.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px">
+        <div class="card">
+          <h3>Our mission</h3>
+          <p class="muted">
+        To deliver quality-driven software and design solutions.To support businesses and publishers with accurate and timely e-publishing services.To create employment and training opportunities for young graduates
+</p>
+        </div>
+        <div class="card">
+          <h3>Our approach</h3>
+          <p class="muted">To empower local talent with global skills and provide reliable software and publishing solutions that bridge creativity with technology.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h2>Services</h2>
+      <p class="muted">We are specialize in </p>
+
+      <div class="grid" id="servicesGrid">
+        <div class="service">
+          <h3>Software Publishing & Development</h3>
+          <p>We design, develop, and publish innovative software solutions tailored to client needs.
+Our team ensures every product meets global quality standards and user experience excellence.
+From concept to deployment, we turn your software ideas into reliable, real-world applications.</p>
+        </div>
+        <div class="service">
+          <h3>E-Publishing & Digital Conversion Services</h3>
+          <p>KPS offers end-to-end e-publishing support for journals, books, and digital learning platforms.
+We specialize in content structuring, XML/HTML conversion, and digital distribution formats.
+Our precision-driven process ensures flawless output for publishers and academic institutions worldwide.</p>
+        </div>
+        <div class="service">
+          <h3>Cloud & DevOps</h3>
+          <p>We streamline business operations through smart cloud integration and DevOps automation.
+Our experts help organizations achieve faster deployment, scalability, and continuous delivery.
+With secure and optimized cloud infrastructure, we enhance your system performance and reliability.</p>
+        </div>
+        <div class="service">
+          <h3>Maintenance & Support</h3>
+          <p>Our dedicated support team ensures uninterrupted performance of your applications and systems.
+We provide proactive monitoring, quick issue resolution, and version updates with zero downtime.
+At KPS, we keep your production environment secure, stable, and always running efficiently.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREERS -->
+    <section id="careers">
+      <h2>Careers</h2>
+      <p class="muted">We’re hiring! Join Our Team </p>
+
+      <div class="jobs" id="jobsList">
+        <div class="job">
+          <div>
+            <h4>Frontend Developer (2-3yrs)</h4>
+            <div style="color:var(--muted);font-size:13px">Full-time — Villupuram</div>
+          </div>
+          <div>
+            <a class="colorlink" href="#apply" data-link>Apply</a>
+          </div>
+        </div>
+        <div class="job">
+          <div>
+            <h4>Devops Engineer ((8+yrs))</h4>
+            <div style="color:var(--muted);font-size:13px">Full-time — Villupuram</div>
+          </div>
+          <div>
+            <a class="colorlink" href="#apply" data-link>Apply</a>
+          </div>
+        </div>
+      
+      </div>
+
+      <div style="margin-top:18px" class="card">
+        <h3 id="apply">Apply for a role</h3>
+        <p class="muted">If you’re ready to build your career with a company that values learning, teamwork, and real-world project exposure, then KPS is the right place for you.</p>
+        <form id="applyForm">
+          <input type="text" name="name" placeholder="Full name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <select name="role" required>
+            <option value="">Which role?</option>
+            <option>Frontend Developer</option>
+            <option>Devops Engineer</option>
+          </select>
+          <input type="file" name="resume" accept=".pdf,.doc,.docx" />
+          <button type="submit" class="btn">Submit application</button>
+          <div id="applyMsg" style="color:var(--muted);font-size:13px;margin-top:8px"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p class="muted">Have questions? Fill the form and we’ll get back to you </p>
+
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px">
+        <div class="card">
+          <form id="contactForm">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <input type="text" name="subject" placeholder="Subject" />
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit" class="btn">Send message</button>
+            <div id="contactMsg" style="color:var(--muted);font-size:13px;margin-top:8px"></div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>KPS</h3>
+          <p class="muted">130/3A1A1B Service Road,<br>Mathani Nagar,<br/>Kallakurichi-Villupuram, India</p>
+          <p class="muted"style="color: #187bcd"><span>Email : </span>info@kps.in</p>
+          <p class="muted" style="color:#187bcd"><span>Phone : </span>+91 7639150796</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div>
+          © <span id="year"></span> KPS Group. All rights reserved.
+        </div>
+        </div>
+    </footer>
+  </main>
+
+  <script>
+    // Simple client-side routing for single-file "pages"
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const links = Array.from(document.querySelectorAll('[data-link]'));
+    links.forEach(a => a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = (a.getAttribute('href') || '').replace(/^#/, '');
+      if(!target) return;
+      document.querySelectorAll('nav a').forEach(n => n.classList.remove('active'));
+      const navMatch = Array.from(document.querySelectorAll('nav a')).find(n=>n.getAttribute('href')===('#'+target));
+      if(navMatch) navMatch.classList.add('active');
+      const el = document.getElementById(target);
+      if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      // close mobile menu
+      document.getElementById('mobileNav').classList.remove('open');
+    }));
+
+    // mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    menuToggle.addEventListener('click', ()=>{
+      if(mobileNav.classList.contains('open')){ mobileNav.classList.remove('open'); mobileNav.innerHTML = ''; }
+      else { mobileNav.classList.add('open'); mobileNav.innerHTML = document.getElementById('mainNav').innerHTML; bindMobileLinks(); }
+    });
+    function bindMobileLinks(){
+      Array.from(mobileNav.querySelectorAll('a')).forEach(a=>a.addEventListener('click', e=>{ e.preventDefault(); const h=a.getAttribute('href').replace('#',''); document.getElementById(h).scrollIntoView({behavior:'smooth'}); mobileNav.classList.remove('open'); }));
+    }
+
+    // Contact form: client-side demo. Replace with real endpoint.
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const name = data.get('name');
+      document.getElementById('contactMsg').textContent = 'Thanks, ' + name + '! Will back to you';
+      e.target.reset();
+    });
+
+    // Apply form: client-side handling
+    document.getElementById('applyForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      document.getElementById('applyMsg').textContent = 'Application received !';
+      e.target.reset();
+    });
+
+    // Small accessibility: focus visible styling
+    document.addEventListener('keyup', function(e){ if(e.key === 'Tab') document.body.classList.add('show-focus'); });
+
+    // Smooth scroll on load if hash present
+    if(location.hash){ const id = location.hash.replace('#',''); const el = document.getElementById(id); if(el) setTimeout(()=>el.scrollIntoView({behavior:'smooth'}),200); }
+
+  </script>
+</body>
+</html>
